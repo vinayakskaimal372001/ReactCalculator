@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  /* Padding and border are included in the element's total width and height */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font: 22.5px Aria,sans-serif;
+}
+
+html {
+  height: 100%;
+  background: rgb(24, 24, 24);
+  /* background: radial-gradient(circle, #fff 20%, #ccc); */
+  background-size: cover;
+}
+
+#calculator {
+  align-items: center;
+justify-items: center;
+  width: 325px;
+  height: auto;
+
+  margin: 100px auto;
+  padding: 20px 20px 9PX;
+
+  background: rgb(200, 200, 200);
+
+  border-radius: 25px;
+  /* Using box shadows to create 3D effects */
+  box-shadow: 1px 1px #1a1a1a, 0px 10px 15px rgba(80, 77, 77, 0.2);
+}
+
+.screen {
+  float: right;
+
+  height: 40px;
+  width: 212px;
+
+  padding: 0 3px;
+
+  background: rgba(44, 44, 44, 0.496);
+  border-radius: 20px;
+  /* Inset shadow on the screen to create indent */
+  /* box-shadow: inset 0px 4px rgba(85, 85, 85, 0.2); */
+
+  font-size: 17px;
+  line-height: 40px;
+  color:white;
+  text-shadow: 10px 2px 2px rgba(129, 127, 127, 0.2);
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+/* Clear Floats to make sure #calculator includes them correctly */
+.keys, .top {
+  overflow: hidden;
+}
+
+/* Applying css on all the keys */
+.keys button, #clear {
+  float: left;
+  position: relative;
+  top: 0;
+  /* Specifies the type of cursor to be displayed when pointing on an element. */
+  cursor: pointer;
+
+  width: 66px;
+  height: 36px;
+
+  background:#232325;
+  border-radius: 20px;
+  box-shadow: 0px 2px #b2b2b6;
+
+  margin: 0 7px 11px 0;
+
+  color: white;
+  line-height: 36px;
+  text-align: center;
+
+  /* prevent selection of text inside keys */
+  user-select: none;
+
+  /* Transitions allows you to change property values smoothly  */
+  transition: all 0.2s ease;
+}
+
+.keys button.operator {
+  background: #f38a02;
+  margin-right: 0; /* 7px in previous setting*/
+}
+
+/* Eval Button */
+.keys button.eval {
+  background: #515154;
+  /* box-shadow: 0px 2px #b2b2b6; */
+  color: white;
+}
+
+.keys button.eval:hover {
+  background:black;
+  box-shadow: 0px 1px #b2b2b6;
+  color: #ffffff;
+}
+
+.keys button.eval:active {
+  /* box-shadow: 0px 0px #717a33; */
+  top: 4px;
+}
+
+/* Clear Button */
+#clear {
+  background:#515154;
+  /* box-shadow: 0px 2px #b2b2b6; */
+  color: white;
+}
+
+#clear:hover {
+  background: black;
+  box-shadow: 0px 2px #b2b2b6;
+  color: white;
+}
+
+#clear:active {
+  top: 4px;
+  box-shadow: 0px 2px #b2b2b6;
+}
+
+/* Other Buttons */
+.keys button:hover {
+  background: #000000;
+  box-shadow: 0px 2px #b2b2b6;
+  color: white;
+}
+
+.keys button:active {
+  box-shadow: 0px 2px #b2b2b6;
+  top: 4px;
+}
